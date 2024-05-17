@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/baseStyle.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./home.html" class="logo">Natura Nova</a>
+        <ul class="nav-links-list">
+          <li><a href="./home.html" target="_blank">Home</a></li>
+          <li><a href="./gallery.html" target="_blank">Gallery</a></li>
+          <li><a href="./shop.html" target="_blank">Shop Now</a></li>
+
+          <li>
+            <a href="./profile.html" target="_blank">User Profile</a>
+          </li>
+          <li><a href="./feedback.html" target="_blank">Feedback</a></li>
+          <li><a href="./sitemap.html" target="_blank">Sitemap</a></li>
+          <li><a href="./team.html" target="_blank">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div
+      class="header"
+      style="background-image: url(./images/page_image/jungle-1807476_1280.jpg)"
+    >
+      <h1 class="header-title">Shop</h1>
+      <p class="header-description">
+        Make a positive impact with our eco-friendly products.
+      </p>
+    </div>
+    <main>
+      <!--  Navbar-->
+      <div class="container">
+        <!-- Header -->
+        <header>
+          <div class="title">Shop</div>
+          <div class="categories">
+            <button onclick="addDataToHTML('All')">All</button>
+            <button onclick="addDataToHTML('Clothes')">Clothes</button>
+            <button onclick="addDataToHTML('Kitchen items')">
+              Kitchen Items
+            </button>
+            <button onclick="addDataToHTML('Handbands')">Handbands</button>
+            <!-- Add other categories as needed -->
+          </div>
+          <div class="CartIcon">
+            <svg
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewbox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"
+              ></path>
+            </svg>
+            <span>0</span>
+          </div>
+        </header>
+        <div class="listProduct">
+          <!-- Product list -->
+        </div>
+      </div>
+      <div class="cartTab">
+        <h1>Shopping Cart</h1>
+        <div class="listCart">
+          <!-- Cart items  -->
+        </div>
+        <div class="CartButtons">
+          <button class="closebutton">CLOSE</button>
+          <button class="checkOutbutton">CHECK OUT</button>
+        </div>
+      </div>
+      <script src="./js/shop.js"></script>
+    </main>
+    <footer>
+      <div class="page-editor">
+        <a href="./pageeditor1.html">Page Editor | Dulain Jayasumana</a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-container">
+          <ul class="footer-links">
+            <li><a href="./home.html" target="_blank">Home</a></li>
+            <li><a href="./gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="./shop.html" target="_blank">Shop Now</a></li>
+            <li>
+              <a href="./profile.html" target="_blank">User Profile</a>
+            </li>
+            <li><a href="./feedback.html" target="_blank">Feedback</a></li>
+            <li><a href="./siteMap.html" target="_blank">Sitemap</a></li>
+            <li><a href="./Team.html" target="_blank">Team</a></li>
+          </ul>
+          <div class="team">
+            <h4>Our Team</h4>
+            <ul class="team-members">
+              <li>
+                <img
+                  src="./images/team_images/Dulain.jpeg"
+                  alt="Team Member 1"
+                />
+                <p>Dulain Jayasumana</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Kasun.jpeg"
+                  alt="Team Member 2"
+                />
+                <p>Kasun Viranga</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Nidurshan.png"
+                  alt="Team Member 3"
+                />
+                <p>Neediyarusu Nidurshan</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Akilesh.jpeg"
+                  alt="Team Member 4"
+                />
+                <p>Gnanakumar Akilesh</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="footer-copyrights">
+        <p>&copy; All Rights Reserved - Natura Nova</p>
+      </div>
+    </footer>
+    <script src="js/shop.js"></script>
+  </body>
+</html>

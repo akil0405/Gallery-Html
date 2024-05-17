@@ -1,0 +1,44 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* base styles*/
+a,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: rgb(59, 59, 59);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #d9afd9;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+}
+
+/* links */
+a {
+  text-decoration: none;
+}
+
+/* lists */
+li {
+  list-style: none;
+}
+
+/* base style for horizontal- ruler */
+hr {
+  width: 100%;
+  border: 1px solid #050303;
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}

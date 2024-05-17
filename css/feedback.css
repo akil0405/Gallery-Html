@@ -1,0 +1,141 @@
+/* Form styles */
+.form-body {
+  padding: 40px;
+  width: 100vw;
+}
+
+.form-container {
+  max-width: 60vw;
+  height: 1080px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#feedbackForm h1 {
+  text-align: center;
+  color: #2e3a52;
+}
+
+.input-control {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-container {
+  display: flex;
+}
+
+/* Radio Label */
+.radio-container .radio-label {
+  margin: 5px;
+}
+
+/* Inputs fields */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+  font-size: 0.7rem;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Label */
+.input-control label {
+  margin-bottom: 5px;
+}
+
+/* Focus Styles */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+  border-color: #7df0fb;
+  box-shadow: 0 0 0 3px rgba(37, 120, 246, 0.25);
+}
+
+/* Select */
+.input-control select {
+  text-align: center;
+  width: 20%;
+}
+
+/* Style to make the input green when there is a valid input*/
+.input-control.success input {
+  border-color: #0ac56e;
+  box-shadow: 0 0 0 3px rgba(30, 220, 134, 0.25);
+}
+
+/* Style to make the input red  if it has an error */
+.input-control.error input {
+  border-color: red;
+  box-shadow: 0 0 0 3px rgba(221, 34, 34, 0.25);
+}
+
+/* Style to display error message */
+.input-control .error {
+  margin-top: 5px;
+  color: red;
+  font-size: 12px;
+  height: 13px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Submit button styles*/
+.button-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin: 3rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.button-container button:hover {
+  transform: scale(1.1);
+}
+
+/* Hidden */
+.hidden {
+  display: none;
+}
+
+/* Confirmation message */
+#confirmation {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 400px;
+  font-size: 2rem;
+}
+
+.preview-container {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.preview-container p {
+  padding: 1rem;
+}
+.preview-container h2 {
+  padding-bottom: 2rem;
+  font-weight: bold;
+  font-size: 2rem;
+}

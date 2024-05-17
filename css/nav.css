@@ -1,0 +1,33 @@
+/* navbar */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  padding: 0 15% 0 15%;
+  position: fixed;
+  z-index: 20;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.nav-links-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 60%;
+}
+
+.nav-links-list a {
+  font-size: 0.9rem;
+}
+
+.nav-links-list a:hover {
+  color: black;
+}

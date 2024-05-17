@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="./css/baseStyle.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/feedback.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <!-- Navbar -->
+      <header>
+        <nav>
+          <a href="./home.html" class="logo">Natura Nova</a>
+          <ul class="nav-links-list">
+            <li><a href="./home.html" target="_blank">Home</a></li>
+            <li><a href="./gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="./shop.html" target="_blank">Shop Now</a></li>
+
+            <li>
+              <a href="./profile.html" target="_blank">User Profile</a>
+            </li>
+            <li><a href="./feedback.html" target="_blank">Feedback</a></li>
+            <li><a href="./sitemap.html" target="_blank">Sitemap</a></li>
+            <li><a href="./team.html" target="_blank">Team</a></li>
+          </ul>
+        </nav>
+      </header>
+    </header>
+    <!--  Feedback Header -->
+    <div class="header">
+      <h1 class="header-title">Feedback Form</h1>
+      <p class="header-description">We'd love to hear from you</p>
+    </div>
+    <main>
+      <!-- Form -->
+      <div class="form-body">
+        <div class="form-container">
+          <form id="feedbackForm">
+            <h1>We appreciate you feedback!</h1>
+            <div class="input-control">
+              <label for="name">*Enter your name:</label>
+              <input type="text" id="name" name="name" />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label for="email">*Enter your email: </label>
+              <input type="text" id="email" name="email" />
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label>Was this your first time visiting? </label>
+
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="firstTimeYes"
+                  name="firstTime"
+                  value="yes"
+                />
+                <label class="radio-label" for="firstTimeYes">Yes</label>
+                <input
+                  type="radio"
+                  id="firstTimeNo"
+                  name="firstTime"
+                  value="no"
+                />
+                <label class="radio-label" for="firstTimeNo">No</label>
+              </div>
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label
+                >Was this website informative and easy to navigate
+                through?</label
+              >
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="navigabilityYes"
+                  name="navigability"
+                  value="yes"
+                />
+                <label class="radio-label" for="navigabilityYes">Yes</label>
+                <input
+                  type="radio"
+                  id="navigabilityNo"
+                  name="navigability"
+                  value="no"
+                />
+                <label class="radio-label" for="navigabilityNo">No</label>
+              </div>
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label for="improvementComment"
+                >If "No", suggest any improvements for the future:</label
+              >
+              <textarea
+                id="improvementComment"
+                name="improvementComment"
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="input-control">
+              <label
+                >How satisfied are with Our services? Choose from 0 to 10, with
+                1 being "Not satisfied at all!" and 10 being "Extremely
+                satisfied ?</label
+              >
+
+              <div class="radio-container">
+                <input type="radio" id="rating-0" name="rating" value="0" />
+                <label class="radio-label" for="rating-0">0</label>
+                <input type="radio" id="rating-1" name="rating" value="1" />
+                <label class="radio-label" for="rating-1">1</label>
+                <input type="radio" id="rating-2" name="rating" value="2" />
+                <label class="radio-label" for="rating-2">2</label>
+                <input type="radio" id="rating-3" name="rating" value="3" />
+                <label class="radio-label" for="rating-3">3</label>
+                <input type="radio" id="rating-4" name="rating" value="4" />
+                <label class="radio-label" for="rating-4">4</label>
+                <input type="radio" id="rating-5" name="rating" value="5" />
+                <label class="radio-label" for="rating-5">5</label>
+                <input type="radio" id="rating-6" name="rating" value="6" />
+                <label class="radio-label" for="rating-6">6</label>
+                <input type="radio" id="rating-7" name="rating" value="7" />
+                <label class="radio-label" for="rating-7">7</label>
+                <input type="radio" id="rating-8" name="rating" value="8" />
+                <label class="radio-label" for="rating-8">8</label>
+                <input type="radio" id="rating-9" name="rating" value="9" />
+                <label class="radio-label" for="rating-9">9</label>
+                <input type="radio" id="rating-10" name="rating" value="10" />
+                <label class="radio-label" for="rating-10">10</label>
+              </div>
+            </div>
+            <div class="input-control">
+              <label>Would you recommend our services?</label>
+              <div class="radio-container">
+                <input
+                  type="radio"
+                  id="recommendationYes"
+                  name="recommendation"
+                  value="yes"
+                />
+                <label class="radio-label" for="recommendationYes">Yes</label>
+                <input
+                  type="radio"
+                  id="recommendationNo"
+                  name="recommendation"
+                  value="no"
+                />
+                <label class="radio-label" for="recommendationNo">No</label>
+              </div>
+            </div>
+            <div class="input-control">
+              <label for="updatesPreference"
+                >Would you like to receive updates about the website and any
+                offers?</label
+              >
+              <select id="updatesPreference" name="updatesPreference">
+                <option value="Yes-via Email" selected>Yes-via Email</option>
+                <option value="Yes-via Text">Yes-via Text</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="input-control">
+              <label for="additionalComments"
+                >Do you have any additional questions or requests?</label
+              >
+              <textarea
+                id="additionalComments"
+                name="additionalComments"
+                rows="4"
+              ></textarea>
+            </div>
+            <div class="button-container">
+              <button type="submit" id="submitBtn">Submit</button>
+              <button type="button" id="previewBtn">Preview</button>
+            </div>
+          </form>
+
+          <!-- confirmation container -->
+          <div id="confirmation" class="hidden">
+            <div class="confirmation-img">
+              <img src="./gifs/tick.gif" alt="" />
+            </div>
+            <p>Thank you for your feedback!</p>
+          </div>
+
+          <!-- preview container -->
+          <div class="preview-container hidden" id="preview">
+            <h2>Feedback Preview</h2>
+            <p><strong>Name:</strong> <span id="previewName"></span></p>
+            <p><strong>Email:</strong> <span id="previewEmail"></span></p>
+            <p>
+              <strong>First Time Visit:</strong>
+              <span id="previewFirstTime"></span>
+            </p>
+            <p>
+              <strong>Navigability:</strong>
+              <span id="previewNavigability"></span>
+            </p>
+            <p>
+              <strong>Improvement Comment:</strong>
+              <span id="previewImprovementComment"></span>
+            </p>
+            <p>
+              <strong>Satisfaction Rating:</strong>
+              <span id="previewSatisfactionRating"></span>
+            </p>
+            <p>
+              <strong>Recommendation:</strong>
+              <span id="previewRecommendation"></span>
+            </p>
+            <p>
+              <strong>Updates Preference:</strong>
+              <span id="previewUpdatesPreference"></span>
+            </p>
+            <p>
+              <strong>Additional Comments:</strong>
+              <span id="previewAdditionalComments"></span>
+            </p>
+            <div class="button-container">
+              <button type="button" id="editBtn">Edit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- improving page loading performace by adding defer -->
+      <script src="./js/feedback.js" defer></script>
+    </main>
+    <!-- Footer section -->
+    <footer>
+      <div class="page-editor">
+        <a href="./editor2.html">Page Editor | Kasun Viranga</a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-container">
+          <ul class="footer-links">
+            <li><a href="./home.html" target="_blank">Home</a></li>
+            <li><a href="./gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="./shop.html" target="_blank">Shop Now</a></li>
+            <li>
+              <a href="./profile.html" target="_blank">User Profile</a>
+            </li>
+            <li><a href="./feedback.html" target="_blank">Feedback</a></li>
+            <li><a href="./siteMap.html" target="_blank">Sitemap</a></li>
+            <li><a href="./Team.html" target="_blank">Team</a></li>
+          </ul>
+          <div class="team">
+            <h4>Our Team</h4>
+            <ul class="team-members">
+              <li>
+                <img
+                  src="./images/team_images/Dulain.jpeg"
+                  alt="Team Member 1"
+                />
+                <p>Dulain Jayasumana</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Kasun.jpeg"
+                  alt="Team Member 2"
+                />
+                <p>Kasun Viranga</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Nidurshan.png"
+                  alt="Team Member 3"
+                />
+                <p>Neediyarusu Nidurshan</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Akilesh.jpeg"
+                  alt="Team Member 4"
+                />
+                <p>Gnanakumar Akilesh</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="footer-copyrights">
+        <p>&copy; All Rights Reserved - Natura Nova</p>
+      </div>
+    </footer>
+  </body>
+</html>

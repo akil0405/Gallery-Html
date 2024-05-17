@@ -1,0 +1,49 @@
+body {
+    background-image: linear-gradient(yellowgreen,forestgreen);
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    border-left: 5px solid #333333;
+    padding: 28px;
+    color: #120303;
+}
+
+.center {
+    text-align: center;
+}
+
+img {
+    border-radius: 200%;
+    border: 2px solid #60d195;
+    
+}
+
+h1,
+h2,
+h3 {
+    margin-top: 26px;
+    color: #050505;
+    
+}
+
+hr {
+    width: 55%;
+   
+  }
+
+p {
+    line-height: 1.6;
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+a {
+    color: #094c5f;
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+}
+a:hover {
+    color: #3284dc;
+}

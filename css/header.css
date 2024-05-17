@@ -1,0 +1,28 @@
+/* reusable header */
+
+.header {
+  text-align: center;
+  width: 100vw;
+  padding: 200px 0px 150px 0px;
+  position: relative;
+  background-image: url(../images/page_image/main.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.header h1,
+.header p {
+  color: #fff;
+}
+
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.header-description {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

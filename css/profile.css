@@ -1,0 +1,220 @@
+/* Set the background color for the entire body */
+body {
+  background-color: bisque;
+}
+
+/* Define styles for the user profile container */
+.user-profile-container {
+  height: 55vh;
+}
+
+/* Define styles for paragraphs within the user profile container */
+.user-profile-container p {
+  text-align: center;
+  margin-top: 2%;
+  font-weight: bolder;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* Define styles for the heading */
+#heading {
+  font-size: 2rem; /* Set font size to 2rem */
+}
+
+/* Define styles for the main container */
+.container {
+  position: relative;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+  margin-top: 15px;
+  column-gap: 50px;
+}
+
+/* Define styles for the sets */
+.setone,
+.settwo,
+.setthree,
+.setfour {
+  /* Set common styles for sets */
+  background-color: #ffffff;
+  margin-top: 3%;
+  width: 22%; /* Set width to 22% */
+  height: 300px; /* Set height to 300px */
+  box-sizing: border-box;
+  font-size: 20px; /* Set font size to 20px */
+  display: none; /* Hide the sets by default */
+  background: #fbfbfb;
+  backdrop-filter: blur(30px);
+  border-radius: 8px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/* Define styles for buttons */
+button {
+  /* Common button styles */
+  border: 0.5px solid rgb(75, 195, 20);
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* Define styles for the "Start" button */
+#start {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 35px;
+  border: 2px solid rgb(38, 192, 51);
+  border-radius: 20px;
+  background-color: rgb(11, 215, 76);
+}
+
+/* Define styles for the "Next" button */
+#next {
+  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  border: none;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  transition: 0.25s;
+  border-radius: 21px;
+  font-size: 30px;
+  background-color: rgb(0, 192, 26);
+}
+
+/* Define styles for the "Edit Profile" button */
+#edit {
+  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  margin: 0 auto;
+  transition: 0.25s;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+/* Define styles for the "Skip" button */
+#skip {
+  background: -webkit-linear-gradient(right, #5ec1e6, #40aadb);
+  border: none;
+  box-shadow: 0px 1px 8px #2f9cdf;
+  cursor: pointer;
+  transition: 0.25s;
+  border-radius: 21px;
+  font-size: 30px;
+  background-color: rgb(28, 185, 199);
+}
+
+/* Hide the "Next", "Skip", and "Edit" buttons initially */
+#next,
+#skip,
+#edit {
+  display: none;
+}
+
+/* Define hover styles for buttons */
+#start:hover,
+#next:hover,
+#skip:hover,
+#edit:hover {
+  box-shadow: 0 12px 14px 0 rgba(255, 255, 255, 0.24),
+    0 17px 50px 0 rgba(255, 255, 255, 0.19);
+}
+
+/* Define styles for the "My Buttons" container */
+.mybuttons {
+  position: absolute;
+  top: 105%;
+}
+
+/* Define styles for spans within the sets */
+.setone span,
+.settwo span,
+.setthree span,
+.setfour span {
+  display: block;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 7px;
+  font-weight: bold;
+}
+
+/* Define styles for nested spans within sets */
+.setone span span,
+.settwo span span,
+.setthree span span,
+.setfour span span {
+  gap: none;
+  font-weight: lighter;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 18px;
+}
+
+/* Define styles for strong elements within sets */
+.setone strong,
+.settwo strong,
+.setthree strong,
+.setfour strong {
+  color: #0d7006;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  margin-top: 2%;
+  margin-bottom: 10%;
+}
+
+/* Define styles for the underline-title */
+.underline-title {
+  background: -webkit-linear-gradient(right, #01af01ad, #2fcb00);
+  height: 1px;
+  margin: -2rem auto 0 auto;
+  width: 90%;
+}
+
+#progress-bar {
+  display: none;
+  width: 214%;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 0px auto;
+}
+
+#percentage {
+  position: relative;
+  left: 50%;
+}
+
+#progress-bar::after {
+  content: "";
+  display: block;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: inherit;
+  width: var(--progress-width, 0%);
+}
+
+.percentage-info {
+  position: absolute;
+  left: 44.5%;
+  transform: translateX(-50%);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 23;
+}

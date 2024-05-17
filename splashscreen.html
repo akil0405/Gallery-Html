@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Splash Screen</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Loader Settings */
+      .no-scroll-y {
+        overflow-y: hidden;
+      }
+
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+      }
+
+      .animation {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+      }
+
+      .animation .video-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+        z-index: 0;
+      }
+
+      .animation .gif {
+        position: absolute;
+        top: 10%;
+        /* Adjusted to position the GIF at the top */
+        width: 14rem;
+        height: 14rem;
+        z-index: 101;
+        /* Ensure GIF appears on top of the video */
+      }
+
+      .animation .text {
+        position: relative;
+        text-align: center;
+        color: white;
+        z-index: 102;
+        /* Ensure text appears on top of the GIF */
+        margin-top: 2rem;
+      }
+
+      .animation .text h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        padding-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .animation .text h2,
+      .animation .text h4 {
+        font-size: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin: 1rem 0;
+      }
+
+      .animation .text ul {
+        list-style-type: none;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .animation .text ul li {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .section {
+        background-color: #ffffff;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        width: calc(50% + 1px);
+      }
+
+      .section.left {
+        left: 0;
+      }
+
+      .section.right {
+        right: 0;
+      }
+
+      .loaded .animation {
+        opacity: 0;
+        transition: 0.3s ease-out;
+      }
+
+      .loaded .section.left {
+        transform: translateX(-101%);
+        transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2);
+      }
+
+      .loaded .section.right {
+        transform: translateX(101%);
+        transition: 3.5s 0.1s all cubic-bezier(0.1, 0.1, 0.1, 2);
+      }
+
+      @keyframes spinner {
+        to {
+          transform: rotateZ(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body id="page-top" class="no-scroll-y">
+    <div id="body" class="no-scroll-y">
+      <section class="container">
+        <div class="animation">
+          <video autoplay muted loop class="video-background">
+            <source src="videos/splashscreen.mp4" type="video/mp4" />
+          </video>
+
+          <div class="overlay"></div>
+
+          <img src="gifs/splash1.gif" alt="Loading GIF" class="gif" />
+
+          <div class="text">
+            <h1>Natura Nova</h1>
+            <br />
+            <h2>
+              "Safeguarding land life through biodiversity conservation and
+              restoration."
+            </h2>
+            <br />
+            <h4>Team members</h4>
+            <br />
+            <ul>
+              <li>Dulain Jayasumana</li>
+              <li>Kasun Viranga</li>
+              <li>Neediyarasu Nidurshan</li>
+              <li>Gnanakumar Akilesh</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Preloader sides -->
+        <div class="section left"></div>
+        <div class="section right"></div>
+      </section>
+    </div>
+
+    <!-- Script for Preloader -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        setTimeout(function () {
+          $(".container").addClass("loaded");
+          $("#body").removeClass("no-scroll-y");
+          if ($(".container").hasClass("loaded")) {
+            $("#body")
+              .delay(1000)
+              .queue(function () {
+                $(this).remove();
+                window.location.href = "./home.html";
+              });
+          }
+        }, 4000); // 4 seconds timeout
+      });
+    </script>
+  </body>
+</html>

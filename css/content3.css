@@ -1,0 +1,163 @@
+/* Styling for the container holding sections */
+.section-container {
+  max-width: 100ch;
+  margin: 0 auto;
+  padding: 40px;
+  background-color: #f9f9f9;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for each section within the container */
+.section-container .section {
+  margin-bottom: 40px;
+}
+
+/* Styling for section titles */
+.section-title {
+  margin-top: 20px;
+  font-size: 2.5rem;
+  color: #333;
+}
+
+/* Styling for section text */
+.section-text {
+  margin: 10px 0 20px 0;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Styling for lists within sections */
+.section-container li {
+  margin-bottom: 7px;
+  color: #666;
+  list-style-type: disc;
+  margin-left: 1rem;
+}
+
+/* Styling for iframe sections */
+.section-iframes {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+}
+
+/* Styling for iframes within iframe sections */
+.section-iframes iframe {
+  display: block;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for image gallery grid */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Styling for images within image gallery */
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect on images within image gallery */
+.image:hover {
+  transform: scale(1.1);
+}
+
+/* Grid positioning for individual images within image gallery */
+.image1 {
+  grid-row: 1;
+  grid-column: span 1;
+}
+
+.image2 {
+  grid-row: 1;
+  grid-column: span 3;
+}
+
+.image3 {
+  grid-row: 2;
+  grid-column: span 2;
+}
+
+.image4 {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+/* Back to top button */
+#mybutton {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  padding: 20px; /* Some padding */
+  bottom: 30px; /* Place the button at the bottom of the page */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 100; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(75, 236, 89); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+}
+
+/* Hover effect on back to top button */
+#mybutton:hover {
+  background-color: #979e9e; /* Add a dark-grey background on hover */
+}
+
+/* Styling for content links */
+.content-links {
+  position: relative;
+  top: 130px;
+}
+
+/* Styling for easy navigation */
+.easy-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.easy-nav li {
+  display: inline;
+  margin-right: 10px; /* Adjust as needed for spacing between links */
+}
+
+/* Styling for separators between easy navigation links */
+.easy-nav li:not(:last-child)::after {
+  content: "|";
+  color: white; /* Set the color to white */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Styling for easy navigation links */
+.easy-nav a {
+  display: inline;
+  margin-right: 10px; /* Adjust as needed for spacing between links */
+  color: #f9f9f9;
+}
+
+/* Hover effect on easy navigation links */
+.easy-nav a:hover {
+  color: #4b4747; /* Change link color on hover */
+  font-size: 110%; /* Increase font size on hover */
+}
+
+/* Remove margin-right from the last easy navigation link */
+.easy-nav li:last-child {
+  margin-right: 0;
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Links to external style sheets -->
+    <link rel="stylesheet" href="./css/baseStyle.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <link rel="stylesheet" href="./css/home.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav>
+        <a href="./home.html" class="logo">Natura Nova</a>
+        <ul class="nav-links-list">
+          <li><a href="./home.html" target="_blank">Home</a></li>
+          <li><a href="./gallery.html" target="_blank">Gallery</a></li>
+          <li><a href="./shop.html" target="_blank">Shop Now</a></li>
+
+          <li>
+            <a href="./profile.html" target="_blank">User Profile</a>
+          </li>
+          <li><a href="./feedback.html" target="_blank">Feedback</a></li>
+          <li><a href="./sitemap.html" target="_blank">Sitemap</a></li>
+          <li><a href="./team.html" target="_blank">Team</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--  Hero Section -->
+      <section class="hero">
+        <h1 class="hero-title">Welcome to Natura Nova!</h1>
+        <h2 class="hero-subtitle">
+          Preserving Nature's Legacy for Future Generations
+        </h2>
+        <p class="hero-text">
+          At Natura Nova, we believe that by protecting biodiversity, combating
+          wildlife crime, and restoring degraded habitats, we can create a
+          brighter future for all life on land. Join us in our mission to
+          preserve the natural world and ensure a thriving planet for
+          generations to come. Together, we can make a difference.
+        </p>
+
+        <button
+          onclick="window.location.href = '#contentTeam'"
+          class="hero-btn"
+        >
+          Explore Now
+        </button>
+
+        <img
+          class="hero-img"
+          src="./images/page_image/main.jpg"
+          alt="hero image"
+        />
+      </section>
+      <section class="mission">
+        <h2>Our Mission</h2>
+        <div class="mission-text">
+          <p class="text-container">
+            "At Natura Nova, we're on a mission to protect land life. We work to
+            safeguard biodiversity and habitats, stop poaching and trafficking,
+            and halt deforestation while restoring forests. With focused efforts
+            and strong partnerships, we aim to ensure a world where every
+            species can thrive. Our goal is to secure a sustainable future for
+            all, inspiring a love for our planet's diversity and beauty. Driven
+            by responsibility and belief in individual action, together, we can
+            make a difference for the health of our ecosystems and the
+            well-being of future generations"
+          </p>
+        </div>
+      </section>
+      <hr />
+
+      <!-- Team content page container -->
+      <section class="content-blog" id="contentTeam">
+        <h2>Unlock Insights Explore Our Blogs and Articles</h2>
+
+        <div class="blog-container">
+          <div class="blog">
+            <img
+              src="./images/content_images/deforestation.jpg"
+              alt="prevent deforestation"
+            />
+            <div class="blog-description">
+              <h3>Deforestation</h3>
+              <p>
+                Explore the devastating impact of deforestation and its
+                consequences on the environment
+              </p>
+              <a href="./content1.html">Read more</a>
+            </div>
+          </div>
+          <div class="blog">
+            <img
+              src="./images/content_images/forrest-habitat.jpg"
+              alt="Protect biodiversity"
+            />
+            <div class="blog-description">
+              <h3>Bio Diversity</h3>
+              <p>
+                Biodiversity encompasses the variety of life on Earth, including
+                genetic, species, and ecosystem diversity.
+              </p>
+              <a href="./contentPage2.html">Read more</a>
+            </div>
+          </div>
+          <div class="blog">
+            <img
+              src="./images/content_images/animal.jpg"
+              alt="animal Poarching"
+            />
+            <div class="blog-description">
+              <h3>Animal Poarching</h3>
+              <p>
+                Prevent animal poaching through education, enforcement,
+                community involvement, and habitat preservation for sustainable
+                conservation efforts.
+              </p>
+              <a href="./content3.html">Read more</a>
+            </div>
+          </div>
+          <div class="blog">
+            <img
+              src="./images/content_images/Desertification.jpeg"
+              alt="desertification"
+            />
+            <div class="blog-description">
+              <h3>End Desertification</h3>
+              <p>
+                "End Desertification and Restore Degraded Land" is a global
+                initiative aimed at combating
+              </p>
+              <a href="./content-page4.html">Read more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- grid -->
+      <section class="link-grid">
+        <div class="gallery-card">
+          <h3>Gallery</h3>
+          <p>Take a look at our stunning collection of images and visuals.</p>
+          <button onclick="window.location.href='./gallery.html'">
+            View Gallery
+          </button>
+        </div>
+        <div class="feedback-card">
+          <h3>Feedback</h3>
+          <p>Share your feedback to help us enhance your experience.</p>
+          <button onclick="window.location.href='./feedback.html'">
+            Get in Touch
+          </button>
+        </div>
+        <div class="userProfile-card">
+          <h3>User Profile</h3>
+          <p>Keep your information upadated and personalize your experience.</p>
+          <button onclick="window.location.href='./profile.html'">
+            Update Profile
+          </button>
+        </div>
+        <div class="shop-card">
+          <h3>Shop</h3>
+          <p>
+            Start shopping for high-quality products available on our online
+            store.
+          </p>
+          <button onclick="window.location.href='./shop.html'">
+            Explore Products
+          </button>
+        </div>
+        <div class="siteMap-card">
+          <h3>Site Map</h3>
+          <p>Discover the layout of our website</p>
+          <button onclick="window.location.href='./sitemap.html'">
+            Explore Site Map
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- Footer  -->
+    <footer>
+      <div class="page-editor">
+        <a href="./editor2.html">Page Editor | Kasun Viranga</a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-container">
+          <ul class="footer-links">
+            <li><a href="./home.html" target="_blank">Home</a></li>
+            <li><a href="./gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="./shop.html" target="_blank">Shop Now</a></li>
+            <li>
+              <a href="./profile.html" target="_blank">User Profile</a>
+            </li>
+            <li><a href="./feedback.html" target="_blank">Feedback</a></li>
+            <li><a href="./siteMap.html" target="_blank">Sitemap</a></li>
+            <li><a href="./Team.html" target="_blank">Team</a></li>
+          </ul>
+          <div class="team">
+            <h4>Our Team</h4>
+            <ul class="team-members">
+              <li>
+                <img
+                  src="./images/team_images/Dulain.jpeg"
+                  alt="Team Member 1"
+                />
+                <p>Dulain Jayasumana</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Kasun.jpeg"
+                  alt="Team Member 2"
+                />
+                <p>Kasun Viranga</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Nidurshan.png"
+                  alt="Team Member 3"
+                />
+                <p>Neediyarusu Nidurshan</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Akilesh.jpeg"
+                  alt="Team Member 4"
+                />
+                <p>Gnanakumar Akilesh</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="footer-copyrights">
+        <p>&copy; All Rights Reserved - Natura Nova</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce Checkout</title>
+    <link rel="stylesheet" href="css/baseStyle.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/shop.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/datagetter.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="./index.html" class="logo">Natura Nova</a>
+        <ul class="nav-links-list">
+          <li>
+            <a
+              href="http://127.0.0.1:5501/home%20+%20template/splashscreen.html"
+              target="http://127.0.0.1:5501/home%20+%20template/splashscreen.html"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank">Gallery</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">Shop Now</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">User Profile</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">Feedback</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">Sitemap</a>
+          </li>
+          <li>
+            <a href="#" target="_blank">Team</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div
+      class="header"
+      style="background-image: url(./images/page_image/jungle-1807476_1280.jpg)"
+    >
+      <h1 class="header-title">Shop</h1>
+      <p class="header-description">
+        Make a positive impact with our eco-friendly products.
+      </p>
+    </div>
+    <main>
+      <form
+        method="get"
+        action="paymentconfirm.html"
+        id="checkout-form"
+        name="checkout-form"
+      >
+        <div>
+          <h2>Contact Information</h2>
+          <label for="fname" class="required">First Name</label>
+          <input
+            type="text"
+            name="fname"
+            id="fname"
+            placeholder="Enter your first name"
+            required=""
+          />
+          <label for="lname" class="required">Last Name</label>
+          <input
+            type="text"
+            name="lname"
+            id="lname"
+            placeholder="Enter your last name"
+            required=""
+          /><br />
+          <label for="email" class="required">Email Address</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email address"
+            required=""
+          /><br />
+          <label for="phone" class="required">Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Enter your phone number"
+            required=""
+            maxlength="10"
+          />
+        </div>
+        <div>
+          <h2>Shipping Information</h2>
+          <label for="address1" class="required">Address</label>
+          <input
+            type="text"
+            name="address1"
+            id="address1"
+            placeholder="Enter your address line 1"
+            required=""
+          />
+          <label for="city" class="required">City</label>
+          <input
+            type="text"
+            name="city"
+            id="city"
+            placeholder="Enter your city"
+            required=""
+          />
+          <label for="state" class="required">State</label>
+          <input
+            type="text"
+            name="state"
+            id="state"
+            placeholder="Enter your state"
+            required=""
+          />
+          <label for="zip" class="required">Zip</label>
+          <input
+            type="text"
+            name="zip"
+            id="zip"
+            placeholder="Enter your zip"
+            required=""
+            minlength="5"
+            maxlength="5"
+          />
+          <label for="country" class="required">Country</label>
+          <input
+            type="text"
+            name="country"
+            id="country"
+            placeholder="Enter your country"
+            required=""
+          />
+        </div>
+        <div>
+          <h2>Payment Information</h2>
+          <input
+            type="radio"
+            id="visa"
+            name="cardtype"
+            value="Visa"
+            required=""
+          />
+          <img src="../images/shop_images/visa.png" alt="visa" />
+          <input
+            type="radio"
+            id="master"
+            name="cardtype"
+            value="Master"
+            required=""
+          />
+          <img src="../images/shop_images/master.png" alt="master" /><br />
+          <label for="cardno" class="required">Card Number</label>
+          <input
+            type="text"
+            name="cardno"
+            id="cardno"
+            placeholder="#### - #### - #### - ####"
+            required=""
+            maxlength="19"
+          />
+          <label for="cardname" class="required">Name on Card</label>
+          <input
+            type="text"
+            name="cardname"
+            id="cardname"
+            placeholder="Name"
+            required=""
+          />
+          <label for="cardexp" class="required">Card Expiry</label>
+          <input
+            type="text"
+            name="cardexp"
+            id="cardexp"
+            placeholder="mm/yy"
+            required=""
+            maxlength="5"
+          />
+          <label for="cvv" class="required">CVV</label>
+          <input
+            type="text"
+            name="cvv"
+            id="cvv"
+            placeholder="###"
+            required=""
+            maxlength="3"
+          />
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
+      </form>
+      <!-- Newly added section to display cart items -->
+      <div id="cart-items">
+        <h2>Cart Items</h2>
+        <div id="cart-items-list"></div>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          // Function to parse URL query string
+          const getQueryStringParams = (url) => {
+            const params = {};
+            const queryString = url.substring(url.indexOf("?") + 1);
+            const paramPairs = queryString.split("&");
+            paramPairs.forEach((pair) => {
+              const keyValue = pair.split("=");
+              params[keyValue[0]] = decodeURIComponent(keyValue[1]);
+            });
+            return params;
+          };
+
+          // Function to display cart items
+          const displayCartItems = () => {
+            const queryString = window.location.search;
+            const params = getQueryStringParams(queryString);
+            const cartItems = JSON.parse(params.cartItems);
+            const totalPrice = parseFloat(params.price); // Retrieve total price from URL parameter
+
+            const cartItemsContainer =
+              document.getElementById("cart-items-list");
+            cartItems.forEach((item) => {
+              const itemDiv = document.createElement("div");
+              itemDiv.innerHTML = `
+                          <p><strong>Item Name:<\/strong> ${item.name}<\/p>
+                          ${
+                            item.size
+                              ? `<p><strong>Size:<\/strong> ${item.size}<\/p>`
+                              : ""
+                          }
+                          <p><strong>Quantity:<\/strong> ${item.quantity}<\/p>
+                          <p><strong>Price:<\/strong> $${item.totalPrice}<\/p>
+                          <hr>`;
+              cartItemsContainer.appendChild(itemDiv);
+            });
+
+            // Display total price
+            const totalPriceDiv = document.createElement("div");
+            totalPriceDiv.innerHTML = `<p><strong>Total Price:<\/strong> $${totalPrice.toFixed(
+              2
+            )}<\/p>`;
+            cartItemsContainer.appendChild(totalPriceDiv);
+          };
+
+          displayCartItems();
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.getElementById("checkout-form");
+
+          // Validate email address
+          const validateEmail = (email) => {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+          };
+
+          // Validate phone number
+          const validatePhoneNumber = (phoneNumber) => {
+            const regex = /^\d{10}$/;
+            return regex.test(phoneNumber);
+          };
+
+          // Validate name (no numbers allowed)
+          const validateName = (name) => {
+            const regex = /^[a-zA-Z\s]*$/;
+            return regex.test(name);
+          };
+
+          // Validate card number (aformat ####-####-####-####)
+          const validateCardNumber = (cardNumber) => {
+            const regex = /^\d{4}-\d{4}-\d{4}-\d{4}$/;
+            return regex.test(cardNumber);
+          };
+
+          // Validate card expiry (format mm/yy)
+          const validateCardExpiry = (cardExpiry) => {
+            const regex = /^(0[1-9]|1[0-2])\/\d{2}$/;
+            return regex.test(cardExpiry);
+          };
+
+          // Validate CVV (Card Verification Value)
+          const validateCVV = (cvv) => {
+            const regex = /^\d{3}$/;
+            return regex.test(cvv);
+          };
+
+          // Validate the form
+          const validateForm = () => {
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const address1 = document.getElementById("address1").value;
+            const city = document.getElementById("city").value;
+            const state = document.getElementById("state").value;
+            const zip = document.getElementById("zip").value;
+            const country = document.getElementById("country").value;
+            const cardno = document.getElementById("cardno").value;
+            const cardname = document.getElementById("cardname").value;
+            const cardexp = document.getElementById("cardexp").value;
+            const cvv = document.getElementById("cvv").value;
+
+            let isValid = true;
+
+            if (
+              !fname ||
+              !lname ||
+              !email ||
+              !phone ||
+              !address1 ||
+              !city ||
+              !state ||
+              !zip ||
+              !country ||
+              !cardno ||
+              !cardname ||
+              !cardexp ||
+              !cvv
+            ) {
+              alert("Please fill in all required fields.");
+              isValid = false;
+            }
+
+            if (!validateEmail(email)) {
+              alert("Please enter a valid email address.");
+              document.getElementById("email").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("email").classList.remove("error");
+            }
+
+            if (!validatePhoneNumber(phone)) {
+              alert("Please enter a valid phone number.");
+              document.getElementById("phone").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("phone").classList.remove("error");
+            }
+
+            // Validate name fields (first name, last name, city, country, state)
+            if (!validateName(fname)) {
+              alert("First name cannot include numbers.");
+              document.getElementById("fname").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("fname").classList.remove("error");
+            }
+
+            if (!validateName(lname)) {
+              alert("Last name cannot include numbers.");
+              document.getElementById("lname").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("lname").classList.remove("error");
+            }
+
+            if (!validateName(city)) {
+              alert("City cannot include numbers.");
+              document.getElementById("city").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("city").classList.remove("error");
+            }
+
+            if (!validateName(country)) {
+              alert("Country cannot include numbers.");
+              document.getElementById("country").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("country").classList.remove("error");
+            }
+
+            if (!validateName(state)) {
+              alert("State cannot include numbers.");
+              document.getElementById("state").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("state").classList.remove("error");
+            }
+
+            if (!validateName(cardname)) {
+              alert("Name on card cannot include numbers.");
+              document.getElementById("cardname").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("cardname").classList.remove("error");
+            }
+
+            if (!validateCardNumber(cardno)) {
+              alert("Please enter a valid card number.");
+              document.getElementById("cardno").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("cardno").classList.remove("error");
+            }
+
+            if (!validateCardExpiry(cardexp)) {
+              alert("Please enter a valid card expiry date (mm/yy format).");
+              document.getElementById("cardexp").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("cardexp").classList.remove("error");
+            }
+
+            if (!validateCVV(cvv)) {
+              alert("Please enter a valid CVV (3 digits).");
+              document.getElementById("cvv").classList.add("error");
+              isValid = false;
+            } else {
+              document.getElementById("cvv").classList.remove("error");
+            }
+
+            return isValid;
+          };
+
+          form.addEventListener("submit", function (event) {
+            if (!validateForm()) {
+              event.preventDefault(); // Prevent form submission if validation fails
+            }
+          });
+        });
+      </script>
+    </main>
+    <footer>
+      <div class="page-editor">
+        <a href="./pageeditor1.html">Page Editor | Dulain Jayasumana</a>
+      </div>
+      <div class="footer-content">
+        <div class="footer-container">
+          <ul class="footer-links">
+            <li><a href="./home.html" target="_blank">Home</a></li>
+            <li><a href="./gallery.html" target="_blank">Gallery</a></li>
+            <li><a href="./shop.html" target="_blank">Shop Now</a></li>
+            <li>
+              <a href="./profile.html" target="_blank">User Profile</a>
+            </li>
+            <li><a href="./feedback.html" target="_blank">Feedback</a></li>
+            <li><a href="./siteMap.html" target="_blank">Sitemap</a></li>
+            <li><a href="./Team.html" target="_blank">Team</a></li>
+          </ul>
+          <div class="team">
+            <h4>Our Team</h4>
+            <ul class="team-members">
+              <li>
+                <img
+                  src="./images/team_images/Dulain.jpeg"
+                  alt="Team Member 1"
+                />
+                <p>Dulain Jayasumana</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Kasun.jpeg"
+                  alt="Team Member 2"
+                />
+                <p>Kasun Viranga</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Nidurshan.png"
+                  alt="Team Member 3"
+                />
+                <p>Neediyarusu Nidurshan</p>
+              </li>
+              <li>
+                <img
+                  src="./images/team_images/Akilesh.jpeg"
+                  alt="Team Member 4"
+                />
+                <p>Gnanakumar Akilesh</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="footer-copyrights">
+        <p>&copy; All Rights Reserved - Natura Nova</p>
+      </div>
+    </footer>
+    <script src="content3.js"></script>
+  </body>
+</html>

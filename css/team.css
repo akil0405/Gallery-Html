@@ -1,0 +1,128 @@
+/* Setting background color for the body */
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+/* Centering headings */
+.headings {
+  text-align: center;
+}
+
+/* Styling for team container */
+.team-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+/* Main box styling */
+.mainbox {
+  position: relative;
+  top: 80px;
+  max-width: auto; /* Set maximum width */
+  margin: 20px auto; /* Center the container */
+  text-align: center; /* Center inline-block elements */
+}
+
+/* Container styling */
+.container {
+  position: relative;
+  width: 340px; /* Adjust the width as needed */
+  height: 400px;
+  margin: 4px;
+  display: inline-block; /* Display containers inline */
+  vertical-align: top; /* Align containers to the top */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image styling inside containers */
+.container img {
+  width: 100%;
+  height: 110%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+/* Hover effect on container images */
+.container img:hover {
+  opacity: 0.8;
+}
+
+/* Content styling */
+.content {
+  position: absolute;
+  left: calc(50% - (110% / 2)); /* Align horizontally in the middle */
+  width: 110%; /* Set width to match image */
+  height: 60%; /* Set height to match image */
+  border: 1px solid #ffffff;
+  box-shadow: 0 12px 18px 0 rgba(17, 17, 17, 0.24),
+    0 17px 50px 0 rgba(17, 13, 136, 0.19);
+  margin-top: 25px;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  box-shadow: 0 0 1em 0.5em rgba(55, 21, 21, 0.45);
+
+  /* Background styling */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(217, 211, 211, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/* Margin inside content */
+.content .margin {
+  margin: 20px;
+}
+
+/* Show content on container hover */
+.container:hover .content {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Share link styling */
+.share a {
+  justify-items: center;
+  margin: 20px;
+}
+
+/* Icon styling */
+.share a i {
+  font-size: 30px;
+}
+
+/* Hover effect on icons */
+.share a i:hover {
+  transform: scale(1.1);
+}
+
+/* Instagram icon styling */
+.fa.fa-instagram {
+  color: #c32aa3;
+}
+
+/* Twitter icon styling */
+.fa-brands.fa-x-twitter {
+  color: #000000;
+}
+
+/* LinkedIn icon styling */
+.fa.fa-linkedin {
+  color: #0a66c2;
+}
+
+/* Facebook icon styling */
+.fa.fa-facebook {
+  color: #1877f2;
+}
+
+span {
+  font-weight: bold;
+}

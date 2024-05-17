@@ -1,0 +1,58 @@
+*{
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  
+  
+  .topic{
+      color:white;
+      text-align: center;
+      font-size: 3ch;
+  }
+  circle {
+      fill: #f0f0f0;
+      stroke: #00be49;
+  stroke-width: 4;
+  }
+  circle:hover{
+      stroke-width:10px;
+      stroke: black;
+      height: 120%;
+      width: 120%;
+      fill: #00be3f ;
+      transition: all 0.4s ease 0s;
+      stroke: #bebebe ;
+      
+      
+    }
+    line {
+      stroke: 4;
+    }
+    text {
+      fill: rgb(0, 0, 0);
+      font-family: avenir;
+    }
+    .sitemap {
+      padding-top: 60px;
+      padding-bottom: 60px;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-size: cover;
+  
+    }
+    .site-map-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(194, 214, 200);
+      margin-top: 3%;
+      border-radius: 25px ;
+    }
+  
+  
+  

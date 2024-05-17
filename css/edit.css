@@ -1,0 +1,208 @@
+/* Resetting default margin, padding, and box-sizing */
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for the body */
+body {
+  background-image: url(/images/page_image/background.jpg);
+  background-position: center;
+  background-size: cover;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Styling for the main box */
+.mainbox {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/* Styling for paragraphs */
+p{
+  color: rgb(44, 171, 76);
+}
+
+/* Styling for the about-me section */
+.about-me{
+  margin-top: 4%;
+}
+
+/* Styling for the navigation bar */
+nav img{
+  width: 10%;
+  margin-top:1rem;
+  margin-right: 20rem;
+}
+
+/* Container styling */
+.container{
+  max-width: 1200px;
+  margin:0 auto;
+  margin-top: 3rem;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+/* Heading 1 styling */
+h1{
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  margin-top: 2rem;
+  font-weight:700 ;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+/* Heading 3 styling */
+h3{
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* Heading 2 styling */
+h2{
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+}
+
+/* Image styling */
+.myImage img{
+  border: 1px solid whitesmoke;
+  border-radius: 6px;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  border: 0 50px;
+  width: 25%;
+  height: 15%;
+}
+
+/* Hover effect on images */
+.myImage img:hover{
+  transform: scale(1.2);
+}
+
+/* Paragraph styling */
+p{
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Styling for tasks section */
+.tasks{
+  height: 100%;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Styling for content, team, and profile sections */
+#content,#team,#profile{
+  border:2px solid black;
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/* Heading 2 styling for profile, team, and content sections */
+#profile h2,#team h2,#content h2{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* Anchor tag styling for profile, team, and content sections */
+#profile a,#team a,#content a{
+  margin-bottom: 3rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+/* Paragraph styling for profile, team, and content sections */
+#profile p,#team p,#content p{
+  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Styling for strong text */
+strong{
+  font-size: 2rem;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+
+/* Styling for profile section */
+#profile{
+  margin-top: 2rem;
+}
+
+/* Icon styling */
+.icons{
+  font-size: 2rem;
+}
+
+/* Anchor tag styling for icons */
+.icons a{
+  margin-right: 2rem;
+}
+
+/* Hover effect for icons */
+.icons a:hover{
+  opacity: 0.6;
+}
+
+/* Instagram icon styling */
+.fa.fa-instagram{
+  color: #c32aa3;
+}
+
+/* Twitter icon styling */
+.fa-brands.fa-x-twitter{
+  color:#000000 ;
+}
+
+/* LinkedIn icon styling */
+.fa.fa-linkedin{
+  color:#0a66c2;
+}
+
+/* Facebook icon styling */
+.fa.fa-facebook{
+  color: #1877f2;
+}
+
+/* Styling for home link */
+#home{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 5%;
+}
+
+/* Navigation styling */
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  background-color: rgba(255, 255, 255, 0.757);
+  backdrop-filter: blur(10px);
+  padding: 0 15% 0 15%;
+  z-index: 20;
+}
